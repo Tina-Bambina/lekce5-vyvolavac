@@ -29,6 +29,7 @@ let jmena = [
 
 let tazenaJmena = [];
 
+
 function tahnoutJmeno() {
     if (jmena.length === 0) {
         return;
@@ -43,6 +44,37 @@ function tahnoutJmeno() {
     // Vyřadíme vylosované jméno z osudí
     jmena.splice(vyherniIndex, 1);
 
-    // Výherní jméno si uložíme do pole k ostatním výherním
-    tazenaJmena.push(vyherniJmeno);
+    // Výherní jméno si uložíme do pole k ostatním výherním - tady bylo push, ted davam shift, aby se to davalo na zacatek seznamu
+    tazenaJmena.unshift(vyherniJmeno);
+
+    let vyherce = document.querySelector('#vyherka');
+    vyherce.textContent = vyherniJmeno;
+
+    let seznam = document.querySelector('#seznam');
+    seznam.textContent = tazenaJmena;
+   
+    Pocitadlo()
+
 }
+
+let pocet = document.querySelector("#pocitadlo").innerHTML = 0;
+
+function Pocitadlo()
+{
+     pocet++;
+    document.querySelector("#pocitadlo").innerHTML = pocet
+}
+
+var restart = false
+
+function Restart()
+{
+   restart = true;
+   let poRestartu = [];
+   seznam.textContent = poRestartu ;
+   tazenaJmena = poRestartu; 
+
+   document.querySelector("#pocitadlo").innerHTML = pocet = 0;
+
+}
+
