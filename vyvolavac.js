@@ -3,24 +3,24 @@ let jmena = [
     "Kateřina",
     "Júlia",
     "Lucie",
-    "Aneta",
-    "Veronika",
-    "Petra",
-    "Olga",
-    "Naďa",
-    "Nikola",
-    "Eva",
-    "Anísa",
-    "Terezia",
-    "Diana",
-    "Anna",
-    "Iva",
-    "Denisa",
-    "Zuzana",
-    "Jana",
-    "Martina",
-    "Lenka",
-    "Iveta",
+    // "Aneta",
+    // "Veronika",
+    // "Petra",
+    // "Olga",
+    // "Naďa",
+    // "Nikola",
+    // "Eva",
+    // "Anísa",
+    // "Terezia",
+    // "Diana",
+    // "Anna",
+    // "Iva",
+    // "Denisa",
+    // "Zuzana",
+    // "Jana",
+    // "Martina",
+    // "Lenka",
+    // "Iveta",
     "Pavla",
     "Lucie",
     "Kamila",
@@ -61,7 +61,7 @@ let pocet = document.querySelector("#pocitadlo").innerHTML = 0;
 
 function Pocitadlo()
 {
-     pocet++;
+    pocet++;
     document.querySelector("#pocitadlo").innerHTML = pocet
 }
 
@@ -72,7 +72,7 @@ function Restart()
    restart = true;
    let poRestartu = [];
    seznam.textContent = poRestartu ;
-   tazenaJmena = poRestartu; 
+   poRestartu = jmena; // rada bych, aby to nacetlo znova, ale takto to nepujde
 
    document.querySelector("#pocitadlo").innerHTML = pocet = 0;
 
